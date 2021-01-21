@@ -5,12 +5,15 @@ const Counter = () => {
         setCount((prevCount)=>prevCount+1);
     }
     const handleDecrement = ()=>{
-        setCount((prevCount)=>prevCount-1);
+        setCount((prevCount)=>{
+        //    console.log(prevCount);
+            return prevCount-1;
+        });
     }
     const handleReset = ()=>{
         setCount(0);
     }
-    console.log(useState(0));
+ 
     const [Count,setCount] = useState(0);
     return (
         <div>
